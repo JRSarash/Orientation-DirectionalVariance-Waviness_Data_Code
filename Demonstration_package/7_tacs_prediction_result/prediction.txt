@@ -1,0 +1,28 @@
+--- 对新数据 'G:\AI-TACS workflow\6_metric_calculation_result\Metrics_Results.xlsx' 进行 TACS 类别判断 ---
+
+Original and Predicted TACS categories for new data:
+  Filename     meanRO  mean_RO_10_mass_low  ...    meanld  tacs  Predicted_tacs
+0    1.tif  27.856672             0.252843  ...  0.611235     1               1
+1   12.tif  27.960862             0.114312  ...  0.444534     1               1
+2   14.tif  23.989944             0.148320  ...  0.414316     2               2
+3   17.tif  27.237230             0.241702  ...  0.692821     1               1
+4   19.tif  26.065202             0.108148  ...  0.384141     2               1
+5   20.tif  31.767006             0.289079  ...  0.615855     3               3
+6    4.tif  28.894225             0.149241  ...  0.627208     1               1
+7    5.tif  29.079248             0.114259  ...  0.505281     1               1
+8    6.tif  24.229636             0.049906  ...  0.299359     2               2
+9    9.tif  34.306831             0.275911  ...  0.590522     3               3
+
+[10 rows x 8 columns]
+
+Accuracy on this new dataset (comparing 'tacs' vs 'Predicted_tacs'):  0.9
+              precision    recall  f1-score   support
+
+           1       0.83      1.00      0.91         5
+           2       1.00      0.67      0.80         3
+           3       1.00      1.00      1.00         2
+
+    accuracy                           0.90        10
+   macro avg       0.94      0.89      0.90        10
+weighted avg       0.92      0.90      0.89        10
+
