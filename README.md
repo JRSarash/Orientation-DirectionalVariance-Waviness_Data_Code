@@ -19,15 +19,20 @@ Images of collagen fiber as examples to test code are saved in the folder ‘Exa
 
 This is the documentation of explanation of “Demonstration_package”. 
 In this work, we proposed an integrated AI-TACS workflow which allowed for the automatic detection, extraction, conversion, and classification of TACS 1-3 regions directly from histopathological slides. 
-1_input
+
+1_input.
 First, histological tissue sections (5 µm) from breast cancer patients characterized by formalin-fixed paraffin-embedded (FFPE) tissue blocks were obtained and subjected to H&E staining for whole-slide imaging. Here is our example H&E image.
-2_yolo_output
+
+2_yolo_output.
 The H&E images were fed directly into a trained YOLO (version 8) detection model and potential TACS ROIs were identified with a probability score greater than 0.75. Here are corresponding output images of our example H&E image.
-3_qualitative_test_output
+
+3_qualitative_test_output.
 The recognized ROIs were then extracted and processed in MATLAB, where qualitative test was used to exclude those that did not meet features of TACS 1-3 regions. Exclusion criteria were applied as follows: i) ROIs lacking cell clusters in the central region, and ii) ROIs without fibers fully surrounding cell clusters. Here are corresponding results through qualitative test of our example H&E image.
-4_CNN_output
+
+4_CNN_output.
 Subsequently, we used the CNN network applied to the selected ROIs to generate SHG-like images, named converted SHG (c-SHG) images, which contained collagen fiber information. Here are corresponding c-SHG image of our CNN network.
-5_tumor_boundary 
+
+5_tumor_boundary. 
 Here are corresponding results of the tumor boundary extraction.
 6_metric_calculation_results 
 For the output images, we employed a multiparametric approach, including RO and other pixel-wise features, to quantify and characterize the morphology and organization of collagen fibers. Here are corresponding results of multiparametric analysis.
