@@ -16,3 +16,20 @@ Here the voxel-wise waviness and directional variance of collagen fibers are obt
 Here we generate ‘pretty’ images of orientation, waviness and directional variance. To acquire these images, the raw intensity image is used to provide the contrast of fiber features, and the orientation, waviness and directional variance maps are labeled by different colors to show the value information. 
 4. Example
 Images of collagen fiber as examples to test code are saved in the folder ‘Examples’. 
+
+This is the documentation of explanation of “Demonstration_package”. 
+In this work, we proposed an integrated AI-TACS workflow which allowed for the automatic detection, extraction, conversion, and classification of TACS 1-3 regions directly from histopathological slides. 
+1_input
+First, histological tissue sections (5 µm) from breast cancer patients characterized by formalin-fixed paraffin-embedded (FFPE) tissue blocks were obtained and subjected to H&E staining for whole-slide imaging. Here is our example H&E image.
+2_yolo_output
+The H&E images were fed directly into a trained YOLO (version 8) detection model and potential TACS ROIs were identified with a probability score greater than 0.75. Here are corresponding output images of our example H&E image.
+3_qualitative_test_output
+The recognized ROIs were then extracted and processed in MATLAB, where qualitative test was used to exclude those that did not meet features of TACS 1-3 regions. Exclusion criteria were applied as follows: i) ROIs lacking cell clusters in the central region, and ii) ROIs without fibers fully surrounding cell clusters. Here are corresponding results through qualitative test of our example H&E image.
+4_CNN_output
+Subsequently, we used the CNN network applied to the selected ROIs to generate SHG-like images, named converted SHG (c-SHG) images, which contained collagen fiber information. Here are corresponding c-SHG image of our CNN network.
+5_tumor_boundary 
+Here are corresponding results of the tumor boundary extraction.
+6_metric_calculation_results 
+For the output images, we employed a multiparametric approach, including RO and other pixel-wise features, to quantify and characterize the morphology and organization of collagen fibers. Here are corresponding results of multiparametric analysis.
+7_tacs_prediction_result 
+Considering these morpho-structural features of collagen fibers, we achieved an automatic classification of TACS ROIs into a specific category (i.e., 1-3) using the Random Forest algorithm. Here is the prediction result.
